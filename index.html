@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>Character Creation</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <button type="button" onClick="document.getElementById('roll20').innerHTML = rollDice(1,20,0);">
+    Click to roll a d20</button>
+
+  <p id="roll20">0</p>
+
+  <button type="button" onClick="document.getElementById('roll6').innerHTML = rollDice(1,6,0);">
+    Click to roll a d6</button>
+
+  <p id="roll6">0</p>
+
+  <div class="strength">
+    <p>STRENGTH<p>
+    <p id="str">5</p>
+    <button type="button" onClick="document.getElementById('str').innerHTML = addStat(str_stat);">
+      Add strength</button>
+  </div>
+
+</body>
+
+</html>

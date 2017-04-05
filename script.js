@@ -16,13 +16,20 @@
   //Math.random();
   //parseInt();
 
-  var str_stat = 5;
+  var player = {
+    str: 5,
+    dex: 5,
+    con: 5,
+    int: 5,
+    wis: 5,
+    cha: 5,
+  }
 
   for (var i = 0;i < 6; i++) {
     console.log(parseInt(Math.random() * 6) + 1);
   }
 
-  function rollDice(nDice, nSides, modifier) {
+  function rollDice(nDice, nSides, modifier = 0) {
     var count = 0;
 
     for (var i = 0; i < nDice; i++) {
@@ -37,5 +44,40 @@
     return stat;
   }
 
+  function subtractStat(stat) {
+    stat -= 1;
+    return stat;
+  }
+
   console.log(addStat(4))
   console.log(rollDice(3, 6, 1));
+
+
+  $(document).ready(function() {
+
+    $("#str").text(player.str);
+
+    $("#buttonD20").click(function() {
+      //alert("Handler for .click() called.");
+      $("#roll20").text(rollDice(1,20,0));
+    });
+
+    $("#buttonD6").click(function() {
+      $("#roll6").text(rollDice(1,6,0));
+    });
+
+    $("#buttonAddStrength").click(function() {
+      var $str = $("#str");
+      var value = parseInt($str.text());
+      $("#str").text(addStat(value));
+    });
+
+    $("#buttonSubtractStrength").click(function() {
+      var $str = $("#str");
+      var value = parseInt($str.text());
+      $("#str").text(subtractStat(value));
+    });
+
+
+
+  });

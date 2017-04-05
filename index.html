@@ -2,26 +2,26 @@
 
 <head>
   <title>Character Creation</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </head>
 
 <body>
 
-  <button type="button" onClick="document.getElementById('roll20').innerHTML = rollDice(1,20,0);">
-    Click to roll a d20</button>
-
+  <button type="button" id="buttonD20">Click to roll a d20</button>
   <p id="roll20">0</p>
 
-  <button type="button" onClick="document.getElementById('roll6').innerHTML = rollDice(1,6,0);">
-    Click to roll a d6</button>
-
+  <button type="button" id="buttonD6">Click to roll a d6</button>
   <p id="roll6">0</p>
 
   <div class="strength">
-    <p>STRENGTH<p>
-    <p id="str">5</p>
-    <button type="button" onClick="document.getElementById('str').innerHTML = addStat(str_stat);">
-      Add strength</button>
+    <p>STRENGTH</p>
+    <p id="str">0</p>
+    <button type="button" id="buttonAddStrength">Add strength</button>
+    <button type="button" id="buttonSubtractStrength">Subtract strength</button>
   </div>
 
 </body>

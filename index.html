@@ -7,21 +7,41 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
 
+  <!--
   <button type="button" id="buttonD20">Click to roll a d20</button>
   <p id="roll20">0</p>
 
   <button type="button" id="buttonD6">Click to roll a d6</button>
   <p id="roll6">0</p>
+  -->
+
+  <h2>Points left</h2>
+  <h2 id="points">0</h2>
 
   <div class="strength">
     <p>STRENGTH</p>
     <p id="str">0</p>
-    <button type="button" id="buttonAddStrength">Add strength</button>
-    <button type="button" id="buttonSubtractStrength">Subtract strength</button>
+    <button type="button" id="buttonAddStr">+</button>
+    <button type="button" id="buttonSubtractStr">-</button>
+  </div>
+
+  <div class="dexterity">
+    <p>DEXTERITY</p>
+    <p id="dex">0</p>
+    <button type="button" id="buttonAddDex">+</button>
+    <button type="button" id="buttonSubtractDex">-</button>
+  </div>
+
+  <div class="constitution">
+    <p>CONSTITUTION</p>
+    <p id="con">0</p>
+    <button type="button" id="buttonAddCon">+</button>
+    <button type="button" id="buttonSubtractCon">-</button>
   </div>
 
 </body>

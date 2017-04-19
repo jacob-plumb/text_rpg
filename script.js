@@ -16,15 +16,14 @@
   //Math.random();
   //parseInt();
 
-  var pointPool = 4;
+  var pointPool = 20;
 
   var player = {
-    str: 5,
-    dex: 5,
-    con: 5,
-    int: 5,
-    wis: 5,
-    cha: 5,
+    str: 1,
+    dex: 1,
+    end: 1,
+    int: 1,
+    cha: 1,
   }
 
   for (var i = 0;i < 6; i++) {
@@ -50,7 +49,9 @@
     $("#points").text(pointPool);
     $("#str").text(player.str);
     $("#dex").text(player.dex);
-    $("#con").text(player.dex);
+    $("#end").text(player.end);
+    $("#int").text(player.int);
+    $("#cha").text(player.cha);
 
     $("#buttonD20").click(function() {
       //alert("Handler for .click() called.");
@@ -97,20 +98,56 @@
       }
     });
 
-    $("#buttonAddCon").click(function() {
-      if (player.con + 1 < 11 && pointPool > 0) {
-        player.con += 1;
+    $("#buttonAddEnd").click(function() {
+      if (player.end + 1 < 11 && pointPool > 0) {
+        player.end += 1;
         pointPool -= 1;
-        $("#con").text(player.con);
+        $("#end").text(player.end);
         $("#points").text(pointPool);
       }
     });
 
-    $("#buttonSubtractCon").click(function() {
-      if (player.con - 1 > 0) {
-        player.con -= 1;
+    $("#buttonSubtractEnd").click(function() {
+      if (player.end - 1 > 0) {
+        player.end -= 1;
         pointPool += 1;
-        $("#con").text(player.con);
+        $("#end").text(player.end);
+        $("#points").text(pointPool);
+      }
+    });
+
+    $("#buttonAddInt").click(function() {
+      if (player.int + 1 < 11 && pointPool > 0) {
+        player.int += 1;
+        pointPool -= 1;
+        $("#int").text(player.int);
+        $("#points").text(pointPool);
+      }
+    });
+
+    $("#buttonSubtractInt").click(function() {
+      if (player.int - 1 > 0) {
+        player.int -= 1;
+        pointPool += 1;
+        $("#int").text(player.int);
+        $("#points").text(pointPool);
+      }
+    });
+
+    $("#buttonAddCha").click(function() {
+      if (player.cha + 1 < 11 && pointPool > 0) {
+        player.cha += 1;
+        pointPool -= 1;
+        $("#cha").text(player.cha);
+        $("#points").text(pointPool);
+      }
+    });
+
+    $("#buttonSubtractCha").click(function() {
+      if (player.cha - 1 > 0) {
+        player.cha -= 1;
+        pointPool += 1;
+        $("#cha").text(player.cha);
         $("#points").text(pointPool);
       }
     });

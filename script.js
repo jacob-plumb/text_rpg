@@ -16,14 +16,15 @@
   //Math.random();
   //parseInt();
 
-  var pointPool = 20;
+  var pointPool = 24;
 
   var player = {
     str: 1,
-    dex: 1,
+    agi: 1,
     end: 1,
     int: 1,
     cha: 1,
+    per: 1,
   }
 
   for (var i = 0;i < 6; i++) {
@@ -48,10 +49,11 @@
 
     $("#points").text(pointPool);
     $("#str").text(player.str);
-    $("#dex").text(player.dex);
+    $("#agi").text(player.agi);
     $("#end").text(player.end);
     $("#int").text(player.int);
     $("#cha").text(player.cha);
+    $("#per").text(player.per);
 
     $("#buttonD20").click(function() {
       //alert("Handler for .click() called.");
@@ -62,6 +64,7 @@
       $("#roll6").text(rollDice(1,6,0));
     });
 
+    //STRENGTH
     $("#buttonAddStr").click(function() {
       if (player.str + 1 < 11 && pointPool > 0) {
         player.str += 1;
@@ -80,24 +83,26 @@
       }
     });
 
-    $("#buttonAddDex").click(function() {
-      if (player.dex + 1 < 11 && pointPool > 0) {
-        player.dex += 1;
+    //AGILITY
+    $("#buttonAddAgi").click(function() {
+      if (player.agi + 1 < 11 && pointPool > 0) {
+        player.agi += 1;
         pointPool -= 1;
-        $("#dex").text(player.dex);
+        $("#agi").text(player.agi);
         $("#points").text(pointPool);
       }
     });
 
-    $("#buttonSubtractDex").click(function() {
-      if (player.dex - 1 > 0) {
-        player.dex -= 1;
+    $("#buttonSubtractAgi").click(function() {
+      if (player.agi - 1 > 0) {
+        player.agi -= 1;
         pointPool += 1;
-        $("#dex").text(player.dex);
+        $("#agi").text(player.agi);
         $("#points").text(pointPool);
       }
     });
 
+    //ENDURANCE
     $("#buttonAddEnd").click(function() {
       if (player.end + 1 < 11 && pointPool > 0) {
         player.end += 1;
@@ -116,6 +121,7 @@
       }
     });
 
+    //INTELLECT
     $("#buttonAddInt").click(function() {
       if (player.int + 1 < 11 && pointPool > 0) {
         player.int += 1;
@@ -134,6 +140,7 @@
       }
     });
 
+    //CHARISMA
     $("#buttonAddCha").click(function() {
       if (player.cha + 1 < 11 && pointPool > 0) {
         player.cha += 1;
@@ -148,6 +155,25 @@
         player.cha -= 1;
         pointPool += 1;
         $("#cha").text(player.cha);
+        $("#points").text(pointPool);
+      }
+    });
+
+    //PERCEPTION
+    $("#buttonAddPer").click(function() {
+      if (player.per + 1 < 11 && pointPool > 0) {
+        player.per += 1;
+        pointPool -= 1;
+        $("#per").text(player.per);
+        $("#points").text(pointPool);
+      }
+    });
+
+    $("#buttonSubtractPer").click(function() {
+      if (player.per - 1 > 0) {
+        player.per -= 1;
+        pointPool += 1;
+        $("#per").text(player.per);
         $("#points").text(pointPool);
       }
     });

@@ -18,6 +18,7 @@
 
   var pointPool = 21;
 
+  //Attributes
   var player = {
     str: 1,
     agi: 1,
@@ -25,6 +26,25 @@
     int: 1,
     cha: 1,
     per: 1,
+  }
+
+  //Stats
+  var playerStats = {
+    maxHealth: 0,
+    tempHealth: 0,
+    xp: 0,
+    gold: 0,
+    //Action stats
+    fencing: 0,
+    archery: 0,
+    riding: 0,
+    jousting: 0,
+    grappling: 0,
+    survival: 0,
+    alchemy: 0,
+    
+
+
   }
 
   for (var i = 0;i < 6; i++) {

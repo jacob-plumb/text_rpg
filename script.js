@@ -16,7 +16,7 @@
   //Math.random();
   //parseInt();
 
-  var pointPool = 24;
+  var pointPool = 21;
 
   var player = {
     str: 1,

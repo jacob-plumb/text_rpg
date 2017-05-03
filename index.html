@@ -2,10 +2,7 @@
 
 <head>
   <title>Character Creation</title>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -20,58 +17,69 @@
   <p id="roll6">0</p>
   -->
 
-<div class="bigDiv">
-  <div class="pool">
-    <h2>Points left</h2>
-    <h2 id="points">0</h2>
+  <div id="main">
+
+    <div class="bigDiv">
+      <div class="pool">
+        <h2>Points left</h2>
+        <h2 id="points">0</h2>
+      </div>
+
+      <div class="allocation">
+        <div id="strength" class="stats">
+          <p>STRENGTH</p>
+          <button type="button" id="buttonSubtractStr">-</button>
+          <span id="str">0</span>
+          <button type="button" id="buttonAddStr">+</button>
+        </div>
+
+        <div id="agility" class="stats">
+          <p>AGILITY</p>
+          <button type="button" id="buttonSubtractAgi">-</button>
+          <span id="agi">0</span>
+          <button type="button" id="buttonAddAgi">+</button>
+        </div>
+
+        <div id="endurance" class="stats">
+          <p>ENDURANCE</p>
+          <button type="button" id="buttonSubtractEnd">-</button>
+          <span id="end">0</span>
+          <button type="button" id="buttonAddEnd">+</button>
+        </div>
+
+        <div id="intellect" class="stats">
+          <p>INTELLECT</p>
+          <button type="button" id="buttonSubtractInt">-</button>
+          <span id="int">0</span>
+          <button type="button" id="buttonAddInt">+</button>
+        </div>
+
+        <div id="charisma" class="stats">
+          <p>CHARISMA</p>
+          <button type="button" id="buttonSubtractCha">-</button>
+          <span id="cha">0</span>
+          <button type="button" id="buttonAddCha">+</button>
+        </div>
+
+        <div id="perception" class="stats">
+          <p>PERCEPTION</p>
+          <button type="button" id="buttonSubtractPer">-</button>
+          <span id="per">0</span>
+          <button type="button" id="buttonAddPer">+</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="game">
+      <p>Game Play Here</p>
+    </div>
+
+    <div id="info">
+      <p>Info Here</p>
+    </div>
+
   </div>
-
-  <div class="allocation">
-    <div id="strength" class="stats">
-      <p>STRENGTH</p>
-      <button type="button" id="buttonSubtractStr">-</button>
-      <span id="str">0</span>
-      <button type="button" id="buttonAddStr">+</button>
-    </div>
-
-    <div id="agility" class="stats">
-      <p>AGILITY</p>
-      <button type="button" id="buttonSubtractAgi">-</button>
-      <span id="agi">0</span>
-      <button type="button" id="buttonAddAgi">+</button>
-    </div>
-
-    <div id="endurance" class="stats">
-      <p>ENDURANCE</p>
-      <button type="button" id="buttonSubtractEnd">-</button>
-      <span id="end">0</span>
-      <button type="button" id="buttonAddEnd">+</button>
-    </div>
-
-    <div id="intellect" class="stats">
-      <p>INTELLECT</p>
-      <button type="button" id="buttonSubtractInt">-</button>
-      <span id="int">0</span>
-      <button type="button" id="buttonAddInt">+</button>
-    </div>
-
-    <div id="charisma" class="stats">
-      <p>CHARISMA</p>
-      <button type="button" id="buttonSubtractCha">-</button>
-      <span id="cha">0</span>
-      <button type="button" id="buttonAddCha">+</button>
-    </div>
-
-    <div id="perception" class="stats">
-      <p>PERCEPTION</p>
-      <button type="button" id="buttonSubtractPer">-</button>
-      <span id="per">0</span>
-      <button type="button" id="buttonAddPer">+</button>
-    </div>
-
-  </div>
-</div>
-
 </body>
 
 </html>

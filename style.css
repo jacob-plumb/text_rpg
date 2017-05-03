@@ -2,14 +2,42 @@ body {
   background-color: #eee8aa;
 }
 
+#main {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
 .bigDiv {
   text-align: center;
-  width: 300px;
+  float: left;
+  width: 30%;
 }
+
+#game {
+  float: left;
+  width: 40%;
+}
+
+#info {
+  float: left;
+  width: 30%;
+}
+
+#info::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*.bigDiv, #game, #info {
+  border: 1px solid #333;
+}*/
+
 
 .allocation {
   font-size: 15px;
-  width: 300px;
+  /*width: 300px;*/
+  width: 100%;
   padding-bottom: 20px;
   border-bottom: solid;
   text-align: center;

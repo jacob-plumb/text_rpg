@@ -16,9 +16,9 @@
   //Math.random();
   //parseInt();
 
-  var pointPool = 21;
+  var pointPool = 18;
 
-  //Attributes
+  //Attributes (half modifiers)
   var player = {
     str: 1,
     agi: 1,
@@ -30,11 +30,12 @@
 
   //Stats
   var playerStats = {
-    maxHealth: 0,
-    tempHealth: 0,
+    maxHealth: 10,
+    tempHealth: 10,
     xp: 0,
     gold: 0,
-    //Action stats
+    armor: 0,
+    //Skill
     fencing: 0,
     archery: 0,
     riding: 0,
@@ -42,8 +43,9 @@
     grappling: 0,
     survival: 0,
     alchemy: 0,
-    
+  }
 
+  var playerInv = {
 
   }
 
